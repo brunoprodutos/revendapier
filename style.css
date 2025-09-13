@@ -190,12 +190,20 @@ p {
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-.produto-card h4::before {
-    content: '🔧';
-    font-size: 1.2em;
+.produto-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.produto-card:hover .produto-icon {
+    transform: scale(1.15);
+    filter: drop-shadow(0 4px 8px rgba(17, 113, 63, 0.3));
 }
 
 .produto-card p {
@@ -349,6 +357,16 @@ footer {
     
     .produto-card {
         padding: 20px;
+    }
+    
+    .produto-card h4 {
+        font-size: 1.2em;
+        gap: 10px;
+    }
+    
+    .produto-icon {
+        width: 24px;
+        height: 24px;
     }
     
     li {
